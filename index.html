@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Books</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="header flex column">
+    <nav class="flex">
+      <h1 href="#" class="logo">Awesome Books</h1>
+      <ul class="nav-links flex">
+        <li><a href="#" class="nav-link">List</a></li>
+        <li><a href="#" class="nav-link">Add</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="bottomNav flex">
+      <p id="current_date"></p>
+    </div>
+  </header>
+
+  <section id="awesome-books" class="container flex column invisible">
+    <h2>All awesome books</h2>
+    <ul class="books flex column"></ul>
+    <div class="decoration"></div>
+  </section>
+
+  <section id="add-books" class="container flex column invisible">
+    <h2>Add a new book</h2>
+    <input type="text" id="title" name="title" placeholder="Title" required>
+    <input type="text" id="author" name="author" placeholder="Author" required>
+    <button disabled class="disabled" type="button" id="add">ADD</button>
+  </section>
+
+  <section id="contact" class="container flex column invisible">
+    <h2>Contact Information</h2>
+    <p class="p-top">Do have any questions or you just want to say "Hello"?</p>
+    <p class="p-bot">You can reach out to Me!</p>
+    <div class="contactList">
+      <ul>- My e-mails :
+        <li><a href="#">chawkimbarki500@gmail.com</a></li>
+      </ul>
+      <ul>- Our phone numbers :
+        <li>+216 96 491 077</li>
+        <li>+216 22 905 330</li>
+      </ul>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="footer">
+      <h3>© Copyright   ...</h3>
+    </div>
+  </footer>
+
+  <script type="module" defer src="index.js"></script>
+</body>
+</html>
