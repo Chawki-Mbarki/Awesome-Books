@@ -179,20 +179,32 @@ function displaySection(sectionNumber) {
   }
 }
 
+const navLinks = document.querySelectorAll('.nav-link');
 const books = grabbingBooks();
-const btn = document.getElementById('add');
+const titleInput = document.querySelector('#title');
+const authorInput = document.querySelector('#author');
+const addBtn = document.getElementById('add');
+/* const currentDate = document.querySelector('#current_date'); */
 
-btn.addEventListener('click', () => {
+displaySection(1);
+displayAllBooks(books);
+addRemoveEvent(books);
+isValid();
+
+navLinks.forEach((link, index) => {
+  link.addEventListener('click', () => displaySection(index + 1));
+});
+titleInput.addEventListener('keyup', () => isValid());
+authorInput.addEventListener('keyup', () => isValid());
+addBtn.addEventListener('click', () => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const newBook = new Book(title, author);
+
   books.add(newBook);
-  displayBook(newBook, books.size - 1);
+  displayBook(newBook);
   document.querySelector('#title').value = '';
   document.querySelector('#author').value = '';
   isValid();
+  addRemoveEvent(books);
 });
-
-// display date
-const currentDate = document.querySelector('#current_date');
-currentDate.innerHTML = Date();
