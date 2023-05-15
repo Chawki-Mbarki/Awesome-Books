@@ -185,17 +185,17 @@ nav {
   font-weight: bold;
 }
 
-.nav-links li:nth-child(2){
-  border-right: 2px solid black;
-  border-left: 2px solid black;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
 .contactList li {
   list-style-type: square;
   margin-left: 8rem;
   padding: 0.5rem 0;
+}
+
+.nav-links li:nth-child(2) {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .bottomNav {
@@ -233,10 +233,11 @@ nav {
   margin-bottom: 24px;
 }
 
-@media screen and (min-width:1280px){
-  h1{
+@media screen and (min-width: 1280px) {
+  h1 {
     font-size: 56px;
   }
+
   h2 {
     font-size: 46px;
   }
