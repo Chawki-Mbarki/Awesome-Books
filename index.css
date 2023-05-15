@@ -22,12 +22,12 @@ body {
 
 h1 {
   color: #7e67b1;
-  font-size: 2rem;
+  font-size: calc(3vh + 2vw);
   font-weight: bold;
 }
 
 h2 {
-  font-size: calc(3vh + 2vw);
+  font-size: calc(2vh + 2vw);
   color: #7f66b5;
 }
 
@@ -168,17 +168,28 @@ button:focus {
   padding-bottom: 2rem;
 }
 
-.topNav {
-  padding: 0.5rem 1rem 0.65rem 2rem;
-  justify-content: space-between;
+nav {
+  padding: 2% 1%;
+  width: 100%;
+  justify-content: space-around;
   border: 3px solid #000;
   align-items: center;
 }
 
-.navbar li {
-  font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  color: black;
+.nav-links {
+  gap: 5%;
+}
+
+.nav-links a.active {
+  color: #3a00b7;
+  font-weight: bold;
+}
+
+.nav-links li:nth-child(2){
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .contactList li {
@@ -187,24 +198,9 @@ button:focus {
   padding: 0.5rem 0;
 }
 
-.navbar li:nth-child(2) {
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-}
-
-.navbar a {
-  color: black;
-}
-
-.navbar a.active {
-  color: #7f66b5;
-  font-weight: bold;
-}
-
 .bottomNav {
   font-size: 1rem;
   font-weight: 500;
-  justify-content: flex-end;
 }
 
 #contact p {
@@ -230,13 +226,18 @@ button:focus {
 #footer {
   position: fixed;
   bottom: 0;
-  width: 97%;
-  z-index: 10;
+  width: calc(100vw - 48px);
+  z-index: 2;
   background-color: #e3e3e3;
+  border: 3px solid black;
+  margin-bottom: 24px;
 }
 
-.footer {
-  margin: 1rem 0;
-  padding: 0.25rem 1rem;
-  border: 3px solid black;
+@media screen and (min-width:1280px){
+  h1{
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 46px;
+  }
 }
